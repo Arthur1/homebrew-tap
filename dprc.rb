@@ -5,20 +5,20 @@
 class Dprc < Formula
   desc ""
   homepage ""
-  version "0.1.0-alpha.5"
+  version "0.1.0-alpha.6"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Arthur1/dpr/releases/download/v0.1.0-alpha.5/dprc_Darwin_x86_64.tar.gz"
-      sha256 "107e8127c931f8fb64a342a6883f8de2d4ef2f0c4ff1bfef54b2d61696605acd"
+    if Hardware::CPU.arm?
+      url "https://github.com/Arthur1/dpr/releases/download/v0.1.0-alpha.6/dprc_Darwin_arm64.tar.gz"
+      sha256 "db43625a0eebb23331154e8147e7847997f9c6ee4264271bd70f1bcb69744a71"
 
       def install
         bin.install "dprc"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Arthur1/dpr/releases/download/v0.1.0-alpha.5/dprc_Darwin_arm64.tar.gz"
-      sha256 "6f7893f13c000160c82687f6114287df74cd52b9bc1ccea9fe4811f945cd1d49"
+    if Hardware::CPU.intel?
+      url "https://github.com/Arthur1/dpr/releases/download/v0.1.0-alpha.6/dprc_Darwin_x86_64.tar.gz"
+      sha256 "8cbc7ecff823e30185cff77ef65583536e8ed97795a48ed3958008c95618c137"
 
       def install
         bin.install "dprc"
@@ -28,16 +28,16 @@ class Dprc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Arthur1/dpr/releases/download/v0.1.0-alpha.5/dprc_Linux_arm64.tar.gz"
-      sha256 "affe74b68d9430a570fae1aee95cdb702f7f78dcc4d05b2b542441f0f03ac2a2"
+      url "https://github.com/Arthur1/dpr/releases/download/v0.1.0-alpha.6/dprc_Linux_arm64.tar.gz"
+      sha256 "a1378bdfb13b4ab8e0b6de9b4724930cd9268048effbaad4305b4548bac42f3c"
 
       def install
         bin.install "dprc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Arthur1/dpr/releases/download/v0.1.0-alpha.5/dprc_Linux_x86_64.tar.gz"
-      sha256 "eb3a9740bca7878ce5280611fe47930a2c62fba5bb1b5768c4c448a77fb41b2b"
+      url "https://github.com/Arthur1/dpr/releases/download/v0.1.0-alpha.6/dprc_Linux_x86_64.tar.gz"
+      sha256 "638796d84c565ca19bcc5ff30a4407a4ec4bead22191c2e4dbf48efb67d1968c"
 
       def install
         bin.install "dprc"
