@@ -5,20 +5,20 @@
 class Otlc < Formula
   desc ""
   homepage ""
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Arthur1/otlc/releases/download/v0.1.1/otlc_Darwin_x86_64.tar.gz"
-      sha256 "c7d62f39a438949f79e700edb3e7d04182c6a397f7ab027d6ba30572bdeab70d"
+    on_intel do
+      url "https://github.com/Arthur1/otlc/releases/download/v0.2.0/otlc_Darwin_x86_64.tar.gz"
+      sha256 "6a21863b8e13ab98192c158b69c3df9a505db319cd5058a782f5c50c560ff0d0"
 
       def install
         bin.install "otlc"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Arthur1/otlc/releases/download/v0.1.1/otlc_Darwin_arm64.tar.gz"
-      sha256 "907b84d7ce87eae8f61d28d3f7aa81924b23895babc503fdc6a1bb96456b0ce1"
+    on_arm do
+      url "https://github.com/Arthur1/otlc/releases/download/v0.2.0/otlc_Darwin_arm64.tar.gz"
+      sha256 "c3b294685e6b2028c627e5d29f40bb154a389850ad9b75c7b1fd50fbca854f0f"
 
       def install
         bin.install "otlc"
@@ -27,20 +27,24 @@ class Otlc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Arthur1/otlc/releases/download/v0.1.1/otlc_Linux_arm64.tar.gz"
-      sha256 "5e026cd5978e2a1573fae9976334a1dcaf4226cd3e10482f2e87c95386db331f"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/Arthur1/otlc/releases/download/v0.2.0/otlc_Linux_x86_64.tar.gz"
+        sha256 "98374d31ffdf9ac1f4b61b520951de52dbbb86c58e23065b788ce7671b289211"
 
-      def install
-        bin.install "otlc"
+        def install
+          bin.install "otlc"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Arthur1/otlc/releases/download/v0.1.1/otlc_Linux_x86_64.tar.gz"
-      sha256 "17c63b2bfcfe45d8318a4f6e7cb53390ea03437c87cea2a8067cdfee79e3782f"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/Arthur1/otlc/releases/download/v0.2.0/otlc_Linux_arm64.tar.gz"
+        sha256 "72fb9fc15d4da246b0d426d25ff0de392d561b9a776ecc6b55670177acca4156"
 
-      def install
-        bin.install "otlc"
+        def install
+          bin.install "otlc"
+        end
       end
     end
   end
