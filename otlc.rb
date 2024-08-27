@@ -5,20 +5,20 @@
 class Otlc < Formula
   desc ""
   homepage ""
-  version "0.2.2"
+  version "0.3.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/Arthur1/otlc/releases/download/v0.2.2/otlc_Darwin_x86_64.tar.gz"
-      sha256 "0cde9cc5b491c8e6224cf7015665bf480661798dbefb7a39f01bbce73d860540"
+      url "https://github.com/Arthur1/otlc/releases/download/v0.3.0/otlc_Darwin_x86_64.tar.gz"
+      sha256 "f8a751fa8a6ec944eb452a5e4237d894f0a407dd15eacb555e63a4fc1f7c44d3"
 
       def install
         bin.install "otlc"
       end
     end
     on_arm do
-      url "https://github.com/Arthur1/otlc/releases/download/v0.2.2/otlc_Darwin_arm64.tar.gz"
-      sha256 "2694f401f2150ad8778d82af84692332a5f03b75fc69cf2d44f0e44def89af33"
+      url "https://github.com/Arthur1/otlc/releases/download/v0.3.0/otlc_Darwin_arm64.tar.gz"
+      sha256 "0791cf9c263629b057362eac414b23922b5091041749f1e185f6e4bf200551ef"
 
       def install
         bin.install "otlc"
@@ -29,8 +29,8 @@ class Otlc < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Arthur1/otlc/releases/download/v0.2.2/otlc_Linux_x86_64.tar.gz"
-        sha256 "2b145f882a7577dd55ee38845893b54da1a3689988c2d800702b4c50b006d5e1"
+        url "https://github.com/Arthur1/otlc/releases/download/v0.3.0/otlc_Linux_x86_64.tar.gz"
+        sha256 "7ad5dbe60a044b1e40be1204e2c5e30363994403716e4dbc036729128de762c3"
 
         def install
           bin.install "otlc"
@@ -39,8 +39,8 @@ class Otlc < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Arthur1/otlc/releases/download/v0.2.2/otlc_Linux_arm64.tar.gz"
-        sha256 "a12847cfe5e29815a46a40d8ecefd5330cc630671f675fe0101f79ccd3907034"
+        url "https://github.com/Arthur1/otlc/releases/download/v0.3.0/otlc_Linux_arm64.tar.gz"
+        sha256 "025982bca094d4109f13fa847f47c4b49d9479dde19d29dda37332278f77fd67"
 
         def install
           bin.install "otlc"
