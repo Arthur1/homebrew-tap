@@ -5,20 +5,20 @@
 class Otlc < Formula
   desc ""
   homepage ""
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
-    on_intel do
-      url "https://github.com/Arthur1/otlc/releases/download/v0.4.0/otlc_Darwin_x86_64.tar.gz"
-      sha256 "c60f6bce1272f55545a28ffc399218640fbe03eccd0d77aed5f1094a3493436f"
+    if Hardware::CPU.intel?
+      url "https://github.com/Arthur1/otlc/releases/download/v0.4.1/otlc_Darwin_x86_64.tar.gz"
+      sha256 "04ef2d4a53a226b80251cd7c84d515f1ba44fee5184f45defbbbe8908df4ab58"
 
       def install
         bin.install "otlc"
       end
     end
-    on_arm do
-      url "https://github.com/Arthur1/otlc/releases/download/v0.4.0/otlc_Darwin_arm64.tar.gz"
-      sha256 "088e04c5868811f063a9a4e5b851a6c05687bd800111a33e7298bcc6b9e44d77"
+    if Hardware::CPU.arm?
+      url "https://github.com/Arthur1/otlc/releases/download/v0.4.1/otlc_Darwin_arm64.tar.gz"
+      sha256 "fe73962480c3e1acfe101d414f419af13f35ad05dd9ab216942c5860ffd80df7"
 
       def install
         bin.install "otlc"
@@ -27,20 +27,20 @@ class Otlc < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Arthur1/otlc/releases/download/v0.4.0/otlc_Linux_x86_64.tar.gz"
-        sha256 "10c699dfb8780cacd3711888f19e427bf196354387fdfc4046d928942168287a"
+        url "https://github.com/Arthur1/otlc/releases/download/v0.4.1/otlc_Linux_x86_64.tar.gz"
+        sha256 "7889552b57cc057e9fb4e101946a5d889c9b90bb41e9ba770be1d54d61d0db27"
 
         def install
           bin.install "otlc"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Arthur1/otlc/releases/download/v0.4.0/otlc_Linux_arm64.tar.gz"
-        sha256 "84757b622fb6c5786021a6f9c10095708d8919f3e8974fe6bd526d4278005bc7"
+        url "https://github.com/Arthur1/otlc/releases/download/v0.4.1/otlc_Linux_arm64.tar.gz"
+        sha256 "204e7068d3d3e67fa31350a005b279d48ff5c9a625a952d8c2631d0ae4d5cd8d"
 
         def install
           bin.install "otlc"
