@@ -5,20 +5,20 @@
 class SemconviewGo < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Arthur1/semconview-go/releases/download/v0.1.0/semconview-go_Darwin_x86_64.tar.gz"
-      sha256 "481e61380b7decc0fce76bda5f48400a46e79050cbb464b41650fd75e29e3100"
+      url "https://github.com/Arthur1/semconview-go/releases/download/v0.2.0/semconview-go_Darwin_x86_64.tar.gz"
+      sha256 "1fedae1265975d2d469d58cd9062ff43963c5868ce4ae7ab4b37d07c908075d8"
 
       def install
         bin.install "semconview-go"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Arthur1/semconview-go/releases/download/v0.1.0/semconview-go_Darwin_arm64.tar.gz"
-      sha256 "14a0ce3eb4da47ca2864318c59877aec45074f501e22d3d541433e06b72ade04"
+      url "https://github.com/Arthur1/semconview-go/releases/download/v0.2.0/semconview-go_Darwin_arm64.tar.gz"
+      sha256 "48f18b68e6fd42af979c1f2e4e80a06b52f206f85c2e4badbbe0a528725f846c"
 
       def install
         bin.install "semconview-go"
@@ -29,8 +29,8 @@ class SemconviewGo < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Arthur1/semconview-go/releases/download/v0.1.0/semconview-go_Linux_x86_64.tar.gz"
-        sha256 "e888c052b234f71c4eb4ebfe997f6e83fa3db3f3295f105a262a8314ef47edab"
+        url "https://github.com/Arthur1/semconview-go/releases/download/v0.2.0/semconview-go_Linux_x86_64.tar.gz"
+        sha256 "cec76296ec3122aabce131fe70a452747fe750874e9d1b222bd3310480fcb923"
 
         def install
           bin.install "semconview-go"
@@ -39,8 +39,8 @@ class SemconviewGo < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Arthur1/semconview-go/releases/download/v0.1.0/semconview-go_Linux_arm64.tar.gz"
-        sha256 "48f4f577921507a16e50b8573bf94efb93abe9b7c27ce1c1203a44da05f49205"
+        url "https://github.com/Arthur1/semconview-go/releases/download/v0.2.0/semconview-go_Linux_arm64.tar.gz"
+        sha256 "f76249a022d9e78a8bc4d45a79cafe725fbe6cda629bfe80826d1e2c070f1407"
 
         def install
           bin.install "semconview-go"
