@@ -5,20 +5,20 @@
 class Otlc < Formula
   desc ""
   homepage ""
-  version "0.4.2"
+  version "0.4.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Arthur1/otlc/releases/download/v0.4.2/otlc_Darwin_x86_64.tar.gz"
-      sha256 "8ac0150557e58c83ba7237106347e4d0bfe92bf3030be300d4c1e04fe7af7237"
+      url "https://github.com/Arthur1/otlc/releases/download/v0.4.3/otlc_Darwin_x86_64.tar.gz"
+      sha256 "8f7fdf197137f60dd0b20d7361932a33052adb3020abfb540068e208713a87d7"
 
       def install
         bin.install "otlc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Arthur1/otlc/releases/download/v0.4.2/otlc_Darwin_arm64.tar.gz"
-      sha256 "6852eb1a63993e6ecbc888c5b3f58de17e99e61db77109b4e6f6aa2b7eecdd0f"
+      url "https://github.com/Arthur1/otlc/releases/download/v0.4.3/otlc_Darwin_arm64.tar.gz"
+      sha256 "aaf214a9ad927e3e1b2b70436ca79e1e036a82594c50f5f90613c9df3c8f9c1a"
 
       def install
         bin.install "otlc"
@@ -29,8 +29,8 @@ class Otlc < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Arthur1/otlc/releases/download/v0.4.2/otlc_Linux_x86_64.tar.gz"
-        sha256 "f28db383099758c3c72cfd5f14b21eab50c5dfc407f52c9f12ab3476145de3f0"
+        url "https://github.com/Arthur1/otlc/releases/download/v0.4.3/otlc_Linux_x86_64.tar.gz"
+        sha256 "82de2103d2ce2167b69aa57c6b6a9a4b6fe85d90946d36937b5b5891793980f6"
 
         def install
           bin.install "otlc"
@@ -39,8 +39,8 @@ class Otlc < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Arthur1/otlc/releases/download/v0.4.2/otlc_Linux_arm64.tar.gz"
-        sha256 "394d97811227d4e3be057fef7e03c397c17e548a8ab4d5beedde7be1de43d6c5"
+        url "https://github.com/Arthur1/otlc/releases/download/v0.4.3/otlc_Linux_arm64.tar.gz"
+        sha256 "bc14d46b0be3745578ed0b2bfe9f174f084762d8bd07615ea099bf13231a4c6f"
 
         def install
           bin.install "otlc"
